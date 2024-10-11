@@ -1,5 +1,5 @@
 import { Router, Request, Response } from 'express';
-import trendingRepository from '../repositories/trending.repository';
+import { trendingRepository } from '@trendingService/repository';
 
 const router = Router();
 

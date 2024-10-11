@@ -5,7 +5,12 @@ const config: Config = {
     testEnvironment: 'node',
     roots: ['<rootDir>/test'],
     detectOpenHandles: true,
-    maxWorkers: 1
+    maxWorkers: 1,
+    moduleNameMapper: {
+        '^@trendingService/controllers$': ['<rootDir>/src/controllers/index.ts'],
+        '^@trendingService/middleware$': ['<rootDir>/src/middleware/index.ts'],
+        '^@trendingService/repository$': ['<rootDir>/src/repositories/index.ts']
+    }
 };
 
 export default config;

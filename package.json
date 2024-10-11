@@ -5,8 +5,8 @@
     "main": "src/server.ts",
     "scripts": {
         "build": "tsc",
-        "start": "nodemon src/server",
-        "start-prod": "set NODE_ENV=production && nodemon src/server",
+        "start": "nodemon -r tsconfig-paths/register src/server.ts",
+        "start-prod": "set NODE_ENV=production && nodemon -r tsconfig-paths/register src/server",
         "test": "jest --config jest.config.ts --detectOpenHandles --coverage --maxWorkers=1"
     },
     "keywords": [
@@ -27,6 +27,7 @@
         "supertest": "^6.3.3",
         "ts-jest": "^29.1.1",
         "ts-node": "^10.9.2",
+        "tsconfig-paths": "^4.2.0",
         "typescript": "^5.6.2"
     },
     "dependencies": {

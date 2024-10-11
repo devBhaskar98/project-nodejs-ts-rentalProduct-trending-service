@@ -2,12 +2,10 @@ import http from 'http';
 import express from 'express';
 import './config/logging';
 
-import { corsHandler } from './middleware/corsHandler';
-import { loggingHandler } from './middleware/loggingHandler';
-import { routeNotFound } from './middleware/routeNotFound';
+import { corsHandler, loggingHandler, routeNotFound } from '@trendingService/middleware';
 import { server } from './config/config';
 
-import trendingController from './controllers/trending.controller'; // Import your controller
+import { trendingController } from '@trendingService/controllers';
 
 export const application = express();
 export let httpServer: ReturnType<typeof http.createServer>;
