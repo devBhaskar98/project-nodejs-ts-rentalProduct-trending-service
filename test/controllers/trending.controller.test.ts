@@ -1,10 +1,10 @@
 // src/routes/__tests__/trending.test.ts
 
-import request from 'supertest'; // For testing HTTP requests
-import { application, Shutdown } from '../../src/server'; // Assuming you export your Express app instance from app.ts or similar
-import trendingRepository from '../../src/repositories/trending.repository';
+import request from 'supertest';
+import { application, Shutdown } from '@trendingService/server';
+import { trendingRepository } from '@trendingService/repository';
 
-jest.mock('../../src/repositories/trending.repository'); // Mock the repository
+jest.mock('@trendingService/repository'); // Mock the repository
 
 describe('POST /trending', () => {
     const mockCreate = trendingRepository.create as jest.Mock;

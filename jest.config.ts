@@ -7,6 +7,7 @@ const config: Config = {
     detectOpenHandles: true,
     maxWorkers: 1,
     moduleNameMapper: {
+        '^@trendingService/server$': ['<rootDir>/src/server.ts'],
         '^@trendingService/controllers$': ['<rootDir>/src/controllers/index.ts'],
         '^@trendingService/middleware$': ['<rootDir>/src/middleware/index.ts'],
         '^@trendingService/repository$': ['<rootDir>/src/repositories/index.ts']
